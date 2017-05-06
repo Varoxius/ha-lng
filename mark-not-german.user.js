@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name         HD-Area improvements: MARK "NOT GERMAN"
-// @namespace    https://github.com/Varoxius/ha-lng
-// @updateURL    https://openuserjs.org/meta/Varoxius/My_Script.meta.js
+// @namespace    https://openuserjs.org/users/Varonixus
+// @updateURL https://openuserjs.org/meta/Varonixus/mark-not-german.meta.js
+// @downloadURL https://openuserjs.org/src/scripts/Varonixus/mark-not-german.user.js
 // @version      1.0
 // @description  [en] hd-area language warn, [de] hd-area warnung, wenn Sprache nicht Deutsch ist
 // @author       Varoxius

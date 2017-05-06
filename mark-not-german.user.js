@@ -3,14 +3,14 @@
 // @namespace    https://openuserjs.org/users/Varoxius
 // @updateURL    https://openuserjs.org/meta/Varoxius/mark-not-german.meta.js
 // @downloadURL  https://openuserjs.org/src/scripts/Varoxius/mark-not-german.user.js
-// @version      1.0.1
+// @version      1.0.2
 // @description  [en] hd-area language warn, [de] hd-area warnung, wenn Sprache nicht Deutsch ist
 // @author       Varoxius
 // @match        http://www.hd-area.org/*
 // ==/UserScript==
 // ==OpenUserJS==
 // @author Varoxius
-// @collaborator username
+// @collaborator Varoxius
 // ==/OpenUserJS==
 
 (function() {

@@ -3,14 +3,14 @@
 // @namespace    https://openuserjs.org/users/Varoxius
 // @updateURL    https://openuserjs.org/meta/Varoxius/compact.meta.js
 // @downloadURL  https://openuserjs.org/src/scripts/Varoxius/compact.user.js
-// @version      1.4.0
+// @version      1.4.1
 // @description  hd-area compact layout
 // @author       Varoxius
 // @match        http://www.hd-area.org/*
 // ==/UserScript==
 // ==OpenUserJS==
 // @author Varoxius
-// @collaborator username
+// @collaborator Varoxius
 // ==/OpenUserJS==
 
 (function() {

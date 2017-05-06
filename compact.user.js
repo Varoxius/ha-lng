@@ -3,7 +3,7 @@
 // @namespace    https://openuserjs.org/users/Varoxius
 // @updateURL    https://openuserjs.org/meta/Varoxius/compact.meta.js
 // @downloadURL  https://openuserjs.org/src/scripts/Varoxius/compact.user.js
-// @version      1.0.0
+// @version      1.3.0
 // @description  hd-area compact layout
 // @author       Varoxius
 // @match        http://www.hd-area.org/*
@@ -45,20 +45,46 @@
             $newBlock.append(a[2]);
             return $newBlock;
         });
+        var dlblock = (function($x) {
+            var nexts = $x.nextAll();
+            var $newBlock = $x.wrap("<div class='vx-dlblock'></div>").parent();
+            $newBlock.append(nexts);
+            return $newBlock;
+        });
+        var descBlock = (function($x) {
+            var nexts = $x.nextAll().slice(0, -1);
+            var $newBlock = $x.wrap("<div class='vx-descblock'></div>").parent();
+            $newBlock.append(nexts);
+            return $newBlock;
+        });
         $(document).ready(function() {
             var topNodes = $('#content .topbox');
-            topNodes.each(function(index){
+            topNodes.each(function(i){
                 block($(this));
+            });
+            var downloadNodes = $('#content .download').find('.main:contains("Download:")');
+            downloadNodes.each(function(i){
+                dlblock($(this));
+            });
+            var descNodes = $('#content .download').find('.main:contains("Beschreibung:")');
+            descNodes.each(function(i){
+                descBlock($(this));
+            });
+            var downloadBlocks = $('#content .download');
+            downloadBlocks.each(function(i){
+                var descBlock = $(this).find('.vx-descblock');
+                var dlBlock = $(this).find('.vx-dlblock');
+                descBlock.before(dlBlock);
             });
             var styl1 = document.createElement('style');
             styl1.type = 'text/css';
             var css =
                 ".vx-block .cover > a { width: 100px!important; display: inline-block; margin-right: 8px; float: left; height 126px; }" +
                 ".vx-block .cover img { width: 100px!important; max-height: 130px; }" +
-                ".vx-block .download { width: 548px; }" +
+                ".vx-block .download { width: 548px; height: 268px; overflow: auto; }" +
                 ".vx-block .dlbottom { height: 45px; }" +
-                "#content .vx-block p { overflow: hidden; text-overflow: ellipsis; display: block; white-space: nowrap; height: 30px; }" +
-                "#content .vx-block p:hover { text-overflow: initial; white-space: normal; z-index: 90; height: auto; }";
+                ".vx-dlblock { margin-bottom: 8px; border-left: 5px solid #8cf; padding: 1px 4px; }" +
+                ".rsx-page-num-list li > span, .rsx-page-num-list li > a { font-size: 14px; display: inline-block; height: 20px; background-color: bisque; border: 1px solid silver; border-radius: 3px; line-height: 20px; padding: 0 7px; }";
             if (styl1.styleSheet){
                 styl1.styleSheet.cssText = css;
             } else {

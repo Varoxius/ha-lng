@@ -3,7 +3,7 @@
 // @namespace    https://openuserjs.org/users/Varoxius
 // @updateURL    https://openuserjs.org/meta/Varoxius/compact.meta.js
 // @downloadURL  https://openuserjs.org/src/scripts/Varoxius/compact.user.js
-// @version      1.4.1
+// @version      1.4.3
 // @description  hd-area compact layout
 // @author       Varoxius
 // @match        http://www.hd-area.org/*
@@ -79,12 +79,13 @@
             var styl1 = document.createElement('style');
             styl1.type = 'text/css';
             var css =
-                ".vx-block .cover > a { width: 142px!important; display: inline-block; margin-right: 8px; float: left; height 126px; }" +
+                ".vx-block .cover > a { width: 142px!important; display: inline-block; margin-right: 8px; float: left; height 144px; }" +
                 ".vx-block .cover img { width: auto!important; max-height: 180px; max-width: 142px; }" +
                 ".vx-block .download { width: 548px; height: 268px; overflow: auto; }" +
                 ".vx-block .dlbottom { height: 45px; }" +
                 ".vx-dlblock { margin-bottom: 8px; border-left: 5px solid #6af; padding: 1px 4px; display: inline-block; }" +
-                ".rsx-page-num-list li > span, .rsx-page-num-list li > a { font-size: 14px; display: inline-block; height: 20px; background-color: bisque; border: 1px solid silver; border-radius: 3px; line-height: 20px; padding: 0 7px; }" +
+                ".rsx-page-num-list li > span, .rsx-page-num-list li > a { font-size: 14px; display: inline-block; height: 20px; background-color: #ffffff; border: 1px solid silver; border-radius: 3px; line-height: 20px; padding: 0 7px; }" +
+                ".rsx-page-num-list li > a:hover { text-decoration: none; background-color: #e8e8e8; }" +
                 ".vx-block .download::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); background-color: #F5F5F5; border-radius: 10px; }" +
                 ".vx-block .download::-webkit-scrollbar { width: 8px; background-color: #F5F5F5; }" +
                 ".vx-block .download::-webkit-scrollbar-thumb { border-radius: 2px; background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.14, #aaa), color-stop(0.44, #bbb), color-stop(0.86, #aaa)); }";
